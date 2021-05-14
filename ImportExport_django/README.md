@@ -36,7 +36,7 @@ class ObjetoResource(resources.ModelResource):
 
 @admin.register(Objeto)
 class CatalogoAdmin(ImportExportModelAdmin):
-    resource_class =CatalogoResource
+    resource_class =ObjetoResource
     list_display = Attr(Objeto)
 
 ```
