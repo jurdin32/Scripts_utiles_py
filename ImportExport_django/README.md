@@ -29,8 +29,9 @@ from import_export import resources
 class ObjetoResource(resources.ModelResource):
     class Meta:
         model=Objeto
+```
 
-
+```
 4. en el admin de la aplicacion:
 
 @admin.register(Objeto)
