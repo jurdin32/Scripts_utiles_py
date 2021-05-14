@@ -22,3 +22,5 @@ enviarEmail(
     'Hola este es un mensaje sin archivos adjuntos')
 
 ```
+
+Se puede enviar Contenido Html activando la bandera is_html=True, y en lugar el mensaje se pasa la pagina parseada en string.
