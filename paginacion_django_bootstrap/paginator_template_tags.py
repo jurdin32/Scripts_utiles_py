@@ -22,9 +22,9 @@ def paginacion(actual, fin,total = 12):
     lista=""
     for x in pag:
         if x == actual:
-            lista += """<li class="page-item active"><a class="page-link" onclick="url('page',%s)" style="cursor: pointer; text-decoration:none">%s</a></li>""" % (x, x)
+            lista += """<li class="page-item active"><a class="page-link" onclick="?page=%s" style="cursor: pointer; text-decoration:none">%s</a></li>""" % (x, x)
         else:
-            lista+="""<li class="page-item"><a class="page-link" onclick="url('page',%s)" style="cursor: pointer; text-decoration:none">%s</a></li>"""%(x,x)
+            lista+="""<li class="page-item"><a class="page-link" onclick="?page=%s" style="cursor: pointer; text-decoration:none">%s</a></li>"""%(x,x)
     return mark_safe(lista)
 
     
