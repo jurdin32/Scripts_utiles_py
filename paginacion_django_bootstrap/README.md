@@ -2,7 +2,17 @@
 
 Ejemplo de uso:
 
+Desde la vista:
 
+```
+def objectsPaginado(request,objects,cantidad):
+    paginator = Paginator(objects, cantidad)
+    page = request.GET.get('page')
+    return paginator.get_page(page)
+
+```
+
+En el Template:
 ```
 {%load paginator_template_tags } # carga la libreria
 
@@ -16,7 +26,7 @@ Ejemplo de uso:
                     </li>
                 {% endif %}
                 {% paginacion objects.number objects.paginator.num_pages %}
-                {% if productos.has_next %}
+                {% if objects.has_next %}
                     <a class="page-link" onclick="?page={{ objects.next_page_number }}"
                         style="cursor: pointer"><i class="fas fa-angle-right"></i></a>
                 {% endif %}
@@ -26,3 +36,5 @@ Ejemplo de uso:
 {% endif %}
 
 ```
+
+Donde objects es el objeto que viene paginado.
