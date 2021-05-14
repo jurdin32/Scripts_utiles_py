@@ -28,5 +28,5 @@ function url(nombre, valor) {
         }
         console.log(uri)
     }
-    location.href = "?" + uri+"#product"
+    location.href = "?" + uri
 }
