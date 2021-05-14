@@ -1,21 +1,25 @@
 from email import encoders
 from email.mime.base import MIMEBase
 from pathlib import Path
-import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.utils import  formatdate
+import smtplib
 
 from Emails.configuracion import datos_email
 
 
-def enviarEmail(destinatarios=[], asunto="", mensaje="", archivos=[]):
+def enviarEmail(destinatarios=[], asunto="", mensaje="", archivos=[], is_html=False):
     msg = MIMEMultipart()
     msg['From'] = datos_email['usuario']
     msg['To'] = ", ".join(destinatarios)
     msg['Date'] = formatdate(localtime=True)
     msg['Subject'] = asunto
-    msg.attach(MIMEText(mensaje))
+    if is_html:
+        msg.add_header('Content-Type', 'text/html')
+        msg.set_payload(mensaje)
+    else:
+        msg.attach(MIMEText(mensaje))
     if archivos:
         for path in archivos:
             part = MIMEBase('application', "octet-stream")
