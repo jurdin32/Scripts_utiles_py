@@ -4,18 +4,21 @@ Realizar la configuración del archivo 'configuracion.py'
 
 Ejemplo:
 
+Con adjuntos
+
 ```
-enviarEmail_Adjuntos(
+enviarEmail(
     ['urdin-23@live.com','j-h-diog@live.com.ar'],
     'saludo',
     'Hola este es un mensaje con adjuntos',
     ['archivo.txt'])
+```
 
-
-enviarEmail_sin_Adjuntos(
+Sin adjuntos
+```
+enviarEmail(
     ['urdin-23@live.com','j-h-diog@live.com.ar'],
     'saludo',
-    'Hola este es un mensaje sin archivos adjuntos'
-    )
+    'Hola este es un mensaje sin archivos adjuntos')
 
 ```
