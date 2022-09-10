@@ -8,4 +8,5 @@ onefile -> crea un archivo binario en el que no se necesita tener instalado pyth
 icon -> da un icono al ejecutable
 principal.py -> archivo principal de la aplicación
 
+Una vez instalado pyinstaller ponemos en la consola:
 pyinstaller --windowed --onefile --icon=factiz.ico principal.py
