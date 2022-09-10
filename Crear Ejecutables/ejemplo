@@ -1,0 +1,11 @@
+instalar:
+
+pip install pyinstaller
+
+modo de uso:
+windowed -> evita que aparezca la ventana del cmd
+onefile -> crea un archivo binario en el que no se necesita tener instalado python
+icon -> da un icono al ejecutable
+principal.py -> archivo principal de la aplicación
+
+pyinstaller --windowed --onefile --icon=factiz.ico principal.py
